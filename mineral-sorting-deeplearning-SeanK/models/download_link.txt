@@ -1,0 +1,7 @@
+Link Models:
+
+EfficientNet-V2: 
+https://drive.google.com/file/d/1Xt9I2CrlPnvCI3xkXqeayrO3CHakutlJ/view?usp=sharing
+
+Dual-Stream CNN: 
+https://drive.google.com/file/d/1kORbzcWstbheZj9HTH0lb_MYxilDD2I7/view?usp=sharing 
