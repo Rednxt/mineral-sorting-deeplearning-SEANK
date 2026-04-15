@@ -44,7 +44,7 @@ Pembagian ini memastikan evaluasi akhir dilakukan secara eksklusif pada data yan
 
 ### 1. EfficientNet-V2 (Baseline Model)
 - Konsep: Menggunakan Transfer Learning (pre-trained pada ImageNet).
-- Justifikasi: Bertindak sebagai baseline ambang atas untuk akurasi. Kemampuan ekstraksi fitur yang mendalam membuat model ini sangat tangguh terhadap noise visual, meskipun dengan biaya komputasi yang sedikit lebih tinggi.
+- Justifikasi: Bertindak sebagai baseline ambang atas untuk akurasi. Kemampuan ekstraksi fitur yang mendalam membuat model ini sangat tangguh terhadap noise visual, meskipun dengan biaya komputasi yang sedikit lebih tinggi. Berbeda dengan model arsitektur dalam pada umumnya, iterasi "V2" secara spesifik menggabungkan lapisan konvolusi awal menjadi operasi Fused-MBConv guna meminimalkan hambatan baca-tulis memori (I/O bottleneck) pada akselerator perangkat keras (GPU). Inovasi ini memungkinkan model mencapai akurasi maksimal sekaligus mempertahankan kecepatan komputasi (latensi) yang sangat responsif untuk kebutuhan industri real-time.
 
 ### 2. Dual-Stream CNN (Proposed Model)
 - Konsep: Jaringan kustom ringan yang dilatih dari awal (from scratch).
@@ -105,9 +105,9 @@ Untuk memverifikasi kemampuan model dalam mengenali data yang tidak pernah dilih
 
 Jalankan blok Inferensi di akhir notebook. Skrip akan mengambil batch sampel dari test_ds:
 
-# Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
-# Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
-# Judul berwarna BIRU menandakan prediksi BENAR, dan MERAH menandakan prediksi SALAH.
+## Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
+## Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
+## Judul berwarna BIRU menandakan prediksi BENAR, dan MERAH menandakan prediksi SALAH.
 try:
     print("Inference menggunakan EfficientNet-V2 (Data Test Unseen):")
     visualize_test_inference(model_eff, test_ds, class_names)
