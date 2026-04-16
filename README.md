@@ -75,19 +75,22 @@ Meskipun Dual-Stream CNN berhasil mencapai inferensi yang lebih cepat (3.89 ms),
 Untuk menjalankan proyek ini secara lokal atau di server cloud, ikuti langkah-langkah berikut:
 
 1. Clone repositori:
+```
     git clone https://github.com/rednxt/mineral-sorting-deeplearning-SEANK.git
     cd mineral-sorting-deeplearning-SEANK
-
-2. Instal Dependensi:
+```
+3. Instal Dependensi:
     Pastikan sudah menginstal Python 3.9+. Instal versi yang diperlukan menggunakan file requirements:
-    pip install -r requirements.txt
-
-3. Setup Kaggle API (Diperlukan untuk Dataset):
+```
+     pip install -r requirements.txt
+```
+5. Setup Kaggle API (Diperlukan untuk Dataset):
     Pastikan sudah memiliki file kaggle.json dari akun Kaggle.
+```
     mkdir -p ~/.kaggle
     cp kaggle.json ~/.kaggle/
     chmod 600 ~/.kaggle/kaggle.json
-
+```
 ---
 
 ## Cara Menjalankan Kode
@@ -95,18 +98,18 @@ Untuk menjalankan proyek ini secara lokal atau di server cloud, ikuti langkah-la
 Seluruh pipeline end-to-end disediakan dalam Jupyter Notebook modular. Google Colab (GPU T4) sangat direkomendasikan.
 
 ### Instruksi Opsional (Menjalankan di Google Colab):
-Jika tidak ingin mengunggah file .ipynb secara utuh ke dalam Colab, berikut adalah cara opsional yaitu membuat Notebook kosong baru di Google Colab, lalu menyalin (copas) kode dari file Project_DL_Ore_Sorting_Sean_K.ipynb secara manual, blok per blok, ke dalam sel (cell) komputasi yang baru.
+Jika tidak ingin mengunggah file ```.ipynb``` secara utuh ke dalam Colab, berikut adalah cara opsional yaitu membuat Notebook kosong baru di Google Colab, lalu menyalin (copas) kode dari file ```Project_DL_Ore_Sorting_Sean_K.ipynb``` secara manual, blok per blok, ke dalam sel (cell) komputasi yang baru.
 
 ### 1. Prosedur Pelatihan
-1. Buka notebooks/Project_DL_Ore_Sorting_Sean_K.ipynb
+1. Buka ```notebooks/Project_DL_Ore_Sorting_Sean_K.ipynb```
 2. Jalankan sel Setup dan Import untuk mengunduh dan membersihkan dataset secara otomatis.
-3. Eksekusi sel Model Building dan Training. Proses ini menggunakan EarlyStopping (patience=7) untuk mencegah overfitting.
-4. Log eksperimen disimpan secara otomatis ke direktori logs/fit/.
+3. Eksekusi sel Model Building dan Training. Proses ini menggunakan ```EarlyStopping``` (patience=7) untuk mencegah overfitting.
+4. Log eksperimen disimpan secara otomatis ke direktori ```logs/fit/.```
 
 ### 2. Prosedur Inferensi (Menguji Data Baru)
 Untuk memverifikasi kemampuan model dalam mengenali data yang tidak pernah dilihat selama proses training, proyek ini menyediakan skrip inferensi visual. Pengujian ini membuktikan bahwa model memahami pola visual mineral, bukan sekadar menghafal (overfitting).
 
-Jalankan blok Inferensi di akhir notebook. Skrip akan mengambil batch sampel dari test_ds:
+Jalankan blok Inferensi di akhir notebook. Skrip akan mengambil batch sampel dari ```test_ds```:
 ```
 # Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
 # Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
@@ -125,7 +128,7 @@ except NameError as e:
 
 ## Model dan Logs
 
-Karena batasan ukuran file GitHub, weight model .keras dan demonstrasi video di-host secara eksternal.
+Karena batasan ukuran file GitHub, weight model ```.keras``` dan demonstrasi video di-host secara eksternal.
 
 * EfficientNet-V2: https://drive.google.com/file/d/1Xt9I2CrlPnvCI3xkXqeayrO3CHakutlJ/view?usp=sharing
 * Dual-Stream CNN: https://drive.google.com/file/d/1kORbzcWstbheZj9HTH0lb_MYxilDD2I7/view?usp=sharing 
