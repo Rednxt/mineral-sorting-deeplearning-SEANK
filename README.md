@@ -1,3 +1,5 @@
+![Smart Mining Banner](SmartMiningBanner.png)
+
 # Smart Mining: Real-Time Mineral Classification System
 
 ## Overview
