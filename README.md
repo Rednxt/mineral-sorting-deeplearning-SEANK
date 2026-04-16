@@ -1,4 +1,4 @@
-![Smart Mining Banner](SmartMiningBanner.png)
+![Smart Mining Banner](https://github.com/Rednxt/mineral-sorting-deeplearning-SEANK/blob/main/mineral-sorting-deeplearning-SeanK/results/SmartMiningBanner.pngSmartMiningBanner.png)
 
 # Smart Mining: Real-Time Mineral Classification System
 
