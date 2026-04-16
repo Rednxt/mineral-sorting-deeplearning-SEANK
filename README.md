@@ -94,6 +94,9 @@ Untuk menjalankan proyek ini secara lokal atau di server cloud, ikuti langkah-la
 
 Seluruh pipeline end-to-end disediakan dalam Jupyter Notebook modular. Google Colab (GPU T4) sangat direkomendasikan.
 
+### Instruksi Opsional (Menjalankan di Google Colab):
+Jika tidak ingin mengunggah file .ipynb secara utuh ke dalam Colab, berikut adalah cara opsional yaitu membuat Notebook kosong baru di Google Colab, lalu menyalin (copas) kode dari file Project_DL_Ore_Sorting_Sean_K.ipynb secara manual, blok per blok, ke dalam sel (cell) komputasi yang baru.
+
 ### 1. Prosedur Pelatihan
 1. Buka notebooks/Project_DL_Ore_Sorting_Sean_K.ipynb
 2. Jalankan sel Setup dan Import untuk mengunduh dan membersihkan dataset secara otomatis.
@@ -105,9 +108,10 @@ Untuk memverifikasi kemampuan model dalam mengenali data yang tidak pernah dilih
 
 Jalankan blok Inferensi di akhir notebook. Skrip akan mengambil batch sampel dari test_ds:
 
-## Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
-## Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
-## Judul berwarna BIRU menandakan prediksi BENAR, dan MERAH menandakan prediksi SALAH.
+#### Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
+#### Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
+#### Judul berwarna BIRU menandakan prediksi BENAR, dan MERAH menandakan prediksi SALAH.
+```
 try:
     print("Inference menggunakan EfficientNet-V2 (Data Test Unseen):")
     visualize_test_inference(model_eff, test_ds, class_names)
@@ -116,6 +120,7 @@ try:
     visualize_test_inference(model_dual, test_ds, class_names)
 except NameError as e:
     print(f"Error: {e}. Pastikan model_eff dan model_dual sudah didefinisikan.")
+  ```  
 ---
 
 ## Model dan Logs
