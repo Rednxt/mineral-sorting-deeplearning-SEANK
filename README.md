@@ -1,5 +1,13 @@
 # Smart Mining: Real-Time Mineral Classification System
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Google_Colab-GPU_T4-F9AB00?logo=googlecolab&logoColor=white)
+
+> **Proyek AoL 1 - Deep Learning and Its Application** <br>
+> Mengkomparasikan arsitektur *Transfer Learning* (EfficientNet-V2) dengan arsitektur *Custom* (Dual-Stream CNN) untuk otomasi penyortiran mineral (*Ore Sorting*) di industri pertambangan.
+
+
 ## Overview
 Repositori ini berisi kode sumber, model, dan dokumentasi untuk proyek Deep Learning and Its Application (AoL 1).
 
