@@ -107,11 +107,11 @@ Jika tidak ingin mengunggah file .ipynb secara utuh ke dalam Colab, berikut adal
 Untuk memverifikasi kemampuan model dalam mengenali data yang tidak pernah dilihat selama proses training, proyek ini menyediakan skrip inferensi visual. Pengujian ini membuktikan bahwa model memahami pola visual mineral, bukan sekadar menghafal (overfitting).
 
 Jalankan blok Inferensi di akhir notebook. Skrip akan mengambil batch sampel dari test_ds:
-
-#### Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
-#### Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
-#### Judul berwarna BIRU menandakan prediksi BENAR, dan MERAH menandakan prediksi SALAH.
 ```
+# Skrip mengambil 1 batch sampel dan mengeksekusi prediksi probabilitas.
+# Menampilkan grid Matplotlib (2x3) dengan persentase Confidence Score.
+# Judul berwarna BIRU menandakan prediksi BENAR, dan MERAH menandakan prediksi SALAH.
+
 try:
     print("Inference menggunakan EfficientNet-V2 (Data Test Unseen):")
     visualize_test_inference(model_eff, test_ds, class_names)
