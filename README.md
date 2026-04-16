@@ -65,13 +65,13 @@ Pembagian ini memastikan evaluasi akhir dilakukan secara eksklusif pada data yan
 Kedua model dievaluasi pada 15% dataset testing yang belum pernah dilihat. Evaluasi menggunakan metrik Weighted Average untuk memperhitungkan ketidakseimbangan kelas.
 
 | Metrik (Weighted) | EfficientNet-V2 (Baseline) | Dual-Stream CNN (Proposed) |
-| :--- | :--- | :--- |
-| **Akurasi** | 76.49% (Tinggi) | 42.81% (Moderat) |
-| **Presisi** | 0.7909 | 0.4740 |
-| **Recall** | 0.7649 | 0.4281 |
-| **F1-Score** | 0.7719 | 0.4291 |
-| **Latensi/Gambar** | 4.74 ms | 3.89 ms (Lebih Cepat) |
-| **Kapasitas Real-Time** | ~210 FPS | ~257 FPS (Lebih Tinggi) |
+| :---              | :---                       | :---                       |
+| **Akurasi**       | 76.49% (Tinggi)            | 42.81% (Moderat)           |
+| **Presisi**       | 0.7909                     | 0.4740                     |
+| **Recall**        | 0.7649                     | 0.4281                     |
+| **F1-Score**      | 0.7719                     | 0.4291                     |
+| **Latensi/Gambar**| 4.74 ms                    | 3.89 ms (Lebih Cepat)      |
+| **Kapasitas Real-Time** | ~210 FPS             | ~257 FPS (Lebih Tinggi)    |
 
 ### Analisis Kritis (Trade-off)
 Terdapat trade-off yang jelas antara akurasi prediktif dan kecepatan inferensi.
